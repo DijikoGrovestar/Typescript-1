@@ -52,3 +52,28 @@ function logPoint(p) {
 // logs "12, 26"
 var point = { x: 12, y: 26 };
 logPoint(point);
+function getLength(obj) {
+    return obj.length;
+}
+// function returning different values depending on string or array
+function wrapInArray(obj) {
+    if (typeof obj === "string") {
+        console.log("yyyy", typeof obj);
+        return [obj];
+    }
+    return obj;
+}
+var ex = wrapInArray("4320");
+console.log("test", ex);
+var ex1 = wrapInArray(["err", "455"]);
+console.log("sample", ex1);
+// object is a string, because we declared it above as the variable part of Backpack.
+var object = backpack.get();
+// Since the backpack variable is a string, you can't pass a number to the add function.(23)
+backpack.add("string");
+function logPoint(p) {
+    console.log("".concat(p.x, ", ").concat(p.y));
+}
+// logs "12, 26"
+var point = { x: 12, y: 26 };
+logPoint(point);
